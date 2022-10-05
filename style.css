@@ -1,7 +1,129 @@
+/* début Spinner Loader */
+/*.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation-delay: 5s;
+    animation-name: loader;
+    animation-fill-mode: forwards;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) 5;
+    transform-origin: 40px 40px;
+    animation-fill-mode: forwards;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #99E2D0;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    0% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
+}*/
+
+/* fin Spinner loader */
+
 /* début Style Générale */
 html,
 body {
-    font-family: Raleway;
+    font-family: Roboto;
     font-size: large;
     margin: 0;
 }
@@ -9,41 +131,21 @@ body {
 h2 {
     margin: 20px 0 20px 0;
 }
-header{
-    padding: 30px;
-    background-color: #f7f7f7;
-    text-align: center;
-}
+
 .texteGras {
     font-weight: bold;
 }
 
-.cGris {
-    color: #F2F2F2;
-}
-
-.cBleu {
-    color: #0065FC;
+.cBlanc {
+    color: #fff;
 }
 
 .cNoir {
     color: #000;
 }
 
-.cBleuClaire {
-    color: #DEEBFF;
-}
-
-.bgBleu {
-    background-color: #0065FC;
-}
-
-.bgBleuClaire {
-    background-color: #0065FC;
-}
-
-.bgGris {
-    background-color: #F2F2F2;
+.bgNoir {
+    background-color: #353535;
 }
 
 .flexCentre {
@@ -61,6 +163,12 @@ header{
 .flexBetween {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.flexStart {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -82,7 +190,10 @@ header{
     flex-direction: column;
     justify-content: space-between;
 }
-
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
 .texteStyleNull {
     text-decoration: none;
 }
@@ -92,164 +203,250 @@ header{
 }
 
 .blocShadow {
-    box-shadow: 5px 5px 5px 1px #F2F2F2;
+    box-shadow: 0 5px 5px 1px #e6e6e6;
 }
 
 .blocShadow:hover {
-    box-shadow: 5px 5px 5px 1px #0065FC;
+    box-shadow: 5px 5px 5px 1px #9356DC;
     transform: scale(1.05);
 }
 
 .lien:hover {
-    color: #0065FC;
+    color: #9356DC;
 }
 
 /* Fin Style Générale */
-/* Début Navbar*/
-.margLogo{
-    margin-top: 50px;
+/*Début header */
+
+.margPresentation {
+    background-color: #F6F6F6;
+    text-align: center;
+    padding: 20px;
+}
+
+.margLogo {
+    margin-top: 25px;
     padding-bottom: 10px;
+}
+.logoShadow{
     margin-bottom: 5px;
     box-shadow: 0 5px 5px 0 #d2d2d2;
 }
 
-.texteLocalisation{
-    background-color: #ededed;
+.blocLocalisation {
+    background-color: #EAEAEA;
     height: 50px;
 }
-.iconLocalisation{
+
+.iconLocalisation {
     margin-right: 10px;
 }
+
 .logo {
     width: auto;
     height: 35px;
 }
-
-/* Fin Navbar*/
-/* Début Barre de Recherche*/
-.texteRecherche {
-    display: block;
+.imgMenu {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 300px;
 }
 
-.iconRecherche {
-    display: none;
+/* Début Restaurants*/
+#Restaurants {
+    flex-direction: column-reverse;
+    width: 100%;
 }
 
-.bordureRecherche {
-    width: 400px;
-    border-radius: 10px;
-    border: 1px solid #F2F2F2;
+h2 {
+    margin-top: 0;
 }
 
-.recherche {
-    height: 50px;
-    width: 230px;
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
+.tailleRestaurants {
+    margin-right: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: white;
+}
+
+.imgRestaurants {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 150px;
+}
+
+.blocRestaurants {
     padding-left: 20px;
+    padding-right: 20px;
+    flex: none;
+    width: 90%;
+    margin: 0;
+    height: auto;
 }
 
-.tailleIcon {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px 0 0 10px;
+.sousBlocRestaurants {
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 25px;
 }
 
-.buttonRecherche {
-    height: 50px;
-    width: 120px;
+.margLigne2 {
+    flex-direction: column;
+}
+
+.DetailRestaurants {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.DetailRestaurants h3,
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.bouttonRestaurants:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background: linear-gradient(#FF79DAE8, #9256dce8);
+}
+
+.bouttonRestaurants {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.buttonRecherche:hover {
-    color: #0065FC;
-    background-color: #F2F2F2;
+.etiquette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+    background-color: #99E2D0;
+    color: #127c64;
+    position: relative;
+    top: -140px;
+    right: 10px;
+    z-index: 1;
+    width: 100px;
+    height: 30px;
 }
 
-/* Fin Barre de Recherche*/
-/* Début Filtre*/
-.Filtres {
+/* Fin Restaurants*/
+/* Début liste */
+.liste {
+    counter-reset: section;
+    list-style: none;
+    padding: 0;
+}
+
+.margListe {
+    padding: 20px;
+}
+
+.listeIncrement {
+    counter-reset: subsection;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    height: 75px;
     display: flex;
     align-items: center;
 }
 
-.margFiltre {
-    margin-top: 30px;
-    margin-bottom: 20px;
+.listeIcon {
+    width: 25px;
+    padding: 10px 10px 10px 5px;
+    color: gray;
 }
 
-.TitreFiltre {
-    margin-right: 20px;
+.listeBordure {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    padding-left: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px #d2d2d2b2;
+    display: flex;
+    align-items: center;
 }
 
-.bordureFiltre {
-    height: 50px;
-    border-radius: 30px;
-    border: 2px solid #F2F2F2;
-    margin-right: 25px;
-    cursor: pointer;
+.listeBordure p {
+    margin-bottom: 0;
 }
 
-.Filtre {
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-    padding: 0 20px 0 10px;
+.listeIncrement:hover>.listeBordure>.listeIcon {
+    color: #9356DC;
 }
 
-.tailleIconFiltre {
-    margin: -2px;
-    height: 52px;
-    width: 52px;
-    border-radius: 25px;
-    background-color: #DEEBFF;
-    color: #0065FC;
+.listeIncrement:hover>.listeBordure {
+    background-color: #F5EDFF;
 }
 
-input[type=checkbox]:hover~ .bordureFiltre .filtreTexte {
-    color: #0065FC;
-}
-
-input[type=checkbox]:hover~ .bordureFiltre .tailleIconFiltre {
+.listeIncrement:before {
+    content: counter(section, decimal);
+    padding: 5px 10px 5px 10px;
+    background-color: #9356DC;
     color: white;
-    background-color: #0065FC;
+    border-radius: 50%;
+    margin-right: -15px;
+    z-index: 1;
+    counter-increment: section;
 }
 
-input[type=checkbox]:hover~ .bordureFiltre {
-    border-color: #0065FC;
+/*Fin Liste*/
+/* Début Menu */
+.Menu{
+    background-color: #f6f6f6;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: auto;
+    top: -50px;
+    z-index: 1;
+    padding: 20px;
+}
+.Menu h2{
+    font-family: Shrikhand;
 }
 
-.filtreTexte {
-    height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 0 25px 25px 0;
-    white-space: nowrap;
+.listeMenu {
+    list-style: none;
+    padding: 0;
 }
 
 .inputCheck {
     position: relative;
-    float: left;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .inputCheck input {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 25px);
-    height: 50px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     cursor: pointer;
 }
 
-input[type=checkbox]:checked~.bordureFiltre {
-    border-color: #0065FC;
+input[type=checkbox]:checked~.listeBordureMenu {
+    background-color: #0065FC;
 }
 
-input[type=checkbox]:checked~.bordureFiltre .tailleIconFiltre {
+input[type=checkbox]:checked~.listeBordureMenu .tailleIconFiltre {
     border-color: #0065FC;
     color: white;
     background-color: #0065FC;
@@ -259,369 +456,63 @@ input[type=checkbox]:checked~.bordureFiltre .filtreTexte {
     color: #0065FC;
 }
 
-/* Fin Filtre*/
-/* Début Info Icon*/
-.iconInfo {
+.margListe {
+    padding: 20px;
+}
+
+.listeIcon {
+    width: 25px;
+    padding: 10px 10px 10px 5px;
+    color: gray;
+}
+
+.listeBordureMenu {
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px #d2d2d2b2;
     display: flex;
     align-items: center;
 }
 
-.iconInfoBordure {
-    border: 2px solid #F2F2F2;
-    width: 20px;
-    height: 20px;
-    border-radius: 25px;
-    margin-right: 10px;
+.listeBordureMenu p {
+    margin-bottom: 0;
 }
 
-/* Fin Info Icon*/
-/* Début Restaurants*/
-.tailleRestaurants {
-    margin-right: 20px;
-    padding-top: 50px;
-    height: auto;
-    background-color: #f7f7f7;
+.inputCheck input:hover>.listeBordure>.listeIcon {
+    color: #9356DC;
 }
 
-.imgRestaurants {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 120px;
-}
-
-.blocRestaurants {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.sousBlocRestaurants {
-    width: 30%;
-    height: auto;
-    background-color: white;
-    padding: 1%;
-    border-radius: 20px;
-}
-
-.margLigne1 {
-    margin-bottom: 10px;
-}
-
-.margLigne2 {
-    margin-top: 10px;
-}
-
-.DetailRestaurants {
-    width: 90%;
-}
-
-/* Fin Restaurants*/
-/* Début Populaires*/
-.blocPopulaires {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.margBloc {
-    margin-bottom: 20px;
-}
-
-.taillePopulaires {
-    margin-left: 20px;
-    height: 740px;
-}
-
-.imgPopulaires {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 0 0 15px;
-    width: 100%;
-    height: 160px;
-}
-
-.sousBlocPopulaires {
-    height: auto;
-    background-color: white;
-    padding: 1% 0 1% 1%;
-    border-radius: 20px;
-}
-
-.DetailPopulaires {
-    width: 60%;
-    padding-left: 5%;
-}
-
-.iconPopulaires {
-    padding-top: 25px;
-}
-
-/* Fin Populaires*/
-/* Début Activités*/
-.Activites {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.blocActivites {
-    width: 100%;
-    height: 600px;
-}
-
-.blocsActivites {
-    width: 23%;
-    height: 600px;
-}
-
-.sousBlocActivies {
-    width: 23%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px 1px #F2F2F2;
-}
-
-.titreActivite {
-    height: 70px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 5%;
-    width: 95%;
-}
-
-.sousBlocsActivies {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px 1px #F2F2F2;
-}
-
-.imgActivites {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 530px;
-}
-
-.imgActivites_1 {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 250px;
-}
-
-.imgActivites_2 {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 150px;
-}
-
-.imgActivites_3 {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 200px;
+.inputCheck input:hover>.listeBordure {
+    background-color: #F5EDFF;
 }
 
 /*Début footer*/
 .footer {
-    height: 300px;
-    margin-top: 100px;
+    padding: 10%;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
 }
 
-.tailleBlocFooter {
-    height: 150px;
+.footerTexte {
+    margin-bottom: 10px;
 }
 
-.margeBlocFooterD {
-    margin-left: 15%;
+.footer h3 {
+    font-family: Shrikhand;
+    font-size: larger;
+    margin-top: 0;
 }
 
-.margeBlocFooterF {
-    margin-right: 15%;
+.footerIcon {
+    width: 20px;
+    padding-right: 10px;
 }
 
-@media screen and (max-width: 992px) {
-
-    .taillePopulaires {
-        padding: 20px;
-        min-height: auto;
-    }
-
-    .tailleRestaurants {
-        padding: 20px;
-        min-height: auto;
-    }
-
-    .DetailRestaurants {
-        min-height: 150px;
-    }
-
-    .filtreWarp {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .inputCheck {
-        margin-top: 20px;
-    }
-
-    .TitreFiltre h3 {
-        margin-bottom: 0px;
-    }
-
-    .imgPopulaires {
-        height: 200px;
-    }
-
-    .sousBlocPopulaires {
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #Restaurants {
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-
-    h2 {
-        margin-top: 0;
-    }
-
-    .tailleRestaurants {
-        background-color: white;
-    }
-
-    .blocPopulaires {
-        flex: none;
-        width: 90%;
-        margin: 0;
-        padding: 5%;
-    }
-
-    .blocRestaurants {
-        flex: none;
-        width: 90%;
-        margin: 0;
-        height: auto;
-    }
-
-    .margLigne1 {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .margLigne2 {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .sousBlocRestaurants {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .DetailRestaurants {
-        min-height: auto;
-    }
-
-    .blocActivites {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .sousBlocActivies {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .blocsActivites {
-        width: 100%;
-        height: auto;
-    }
-
-    .sousBlocsActivies {
-        margin-bottom: 50px;
-    }
-
-    .imgActivites,
-    .imgActivites_1,
-    .imgActivites_2,
-    .imgActivites_3 {
-        height: 200px;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-    }
-
-    .margeBlocFooterD {
-        margin-left: 0;
-    }
-
-    .tailleBlocFooter {
-        margin-left: 10%;
-    }
-
-    .margeBlocFooterF {
-        margin-right: 0;
-    }
-
-    .tailleLiens {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
-
-    .tailleLien {
-        width: inherit;
-        min-width: 100%;
-    }
-
-    .bordureNav {
-        border-top: 0;
-        border-bottom: 5px solid #F2F2F2;
-    }
-
-    .bordureNav:hover {
-        border-top: 0;
-        border-bottom: 5px solid #0065FC;
-    }
-
-    .texteRecherche {
-        display: none;
-    }
-
-    .iconRecherche {
-        display: block;
-    }
-    .bordureRecherche {
-        width: 330px;
-    }
-    .buttonRecherche {
-        height: 50px;
-        width: 50px;
-        border-radius: 0 10px 10px 0;
-    }
-
-    .filtreTexte {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .inputCheck{
-        right: 0px;
-    }
-
-}
-
+/*Fin footer*/
 
 
 
@@ -675,4 +566,20 @@ input[type=checkbox]:checked~.coeur i .glissement {
     to {
         margin-top: 100%;
     }
-}*/
+}
+.fa-heart {
+    color: #FFF;
+    background-color: #000;
+    border-radius: 50%;
+    padding:.2em;
+}
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-out;
+}
+.fa-heart:hover::before{
+    color: red;
+    cursor: pointer;
+}
+*/
