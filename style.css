@@ -1,16 +1,30 @@
 /* début Spinner Loader */
-/*.lds-roller {
-    display: inline-block;
-    position: relative;
+.loader {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    animation: 2s 10s forwards disparaitre;
+    z-index: 100;
+}
+
+.lds-roller {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     width: 80px;
     height: 80px;
-    animation-delay: 5s;
-    animation-name: loader;
-    animation-fill-mode: forwards;
+    z-index: 5;
 }
 
 .lds-roller div {
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) 5;
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     transform-origin: 40px 40px;
     animation-fill-mode: forwards;
 }
@@ -108,15 +122,15 @@
     }
 }
 
-@keyframes loader {
+@keyframes disparaitre {
     0% {
-        display: block;
+        opacity: 1;
     }
 
     100% {
-        display: none;
+        opacity: 0;
     }
-}*/
+}
 
 /* fin Spinner loader */
 
