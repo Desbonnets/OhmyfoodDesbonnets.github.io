@@ -1,4 +1,17 @@
 /* début Spinner Loader */
+.Affichage{
+    opacity: 0;
+    animation: 2s 5s forwards apparaitre;
+}
+@keyframes apparaitre {
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}
 .loader {
     position: absolute;
     width: 100%;
@@ -7,7 +20,7 @@
     left: 0;
     bottom: 0;
     background-color: white;
-    animation: 2s 10s forwards disparaitre;
+    animation: 2s 5s forwards disparaitre;
     z-index: 100;
 }
 
@@ -124,13 +137,16 @@
 
 @keyframes disparaitre {
     0% {
+        height: 100%;
         opacity: 1;
     }
 
     100% {
         opacity: 0;
+        height: 0%;
     }
 }
+
 
 /* fin Spinner loader */
 
