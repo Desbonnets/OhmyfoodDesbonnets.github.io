@@ -1,7 +1,7 @@
 /* début Spinner Loader */
 .Affichage{
     opacity: 0;
-    animation: 2s 5s forwards apparaitre;
+    animation: 2s 3s forwards apparaitre;
 }
 @keyframes apparaitre {
     100% {
@@ -20,7 +20,7 @@
     left: 0;
     bottom: 0;
     background-color: white;
-    animation: 2s 5s forwards disparaitre;
+    animation: 2s 3s forwards disparaitre;
     z-index: 100;
 }
 
@@ -209,6 +209,12 @@ h2 {
     align-items: center;
 }
 
+.flexColumnStart {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
 .flexColumnAround {
     display: flex;
     flex-direction: column;
@@ -311,7 +317,10 @@ h2 {
     width: 100%;
     height: 150px;
 }
-
+.imgRestaurants1{
+    display: flex;
+    width: 100%;
+}
 .blocRestaurants {
     padding-left: 20px;
     padding-right: 20px;
@@ -369,11 +378,12 @@ p {
     background-color: #99E2D0;
     color: #127c64;
     position: relative;
-    top: -140px;
-    right: 10px;
+    top: -110px;
+    right: 110px;
     z-index: 1;
     width: 100px;
     height: 30px;
+    margin-right: -100px;
 }
 
 /* Fin Restaurants*/
@@ -465,6 +475,10 @@ p {
     margin-right: 10px;
     display: flex;
     align-items: center;
+    padding-left: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px #d7d7d7;
+    height: 110px;
 }
 
 .inputCheck input {
@@ -476,12 +490,10 @@ p {
     opacity: 0;
     cursor: pointer;
 }
-
-input[type=checkbox]:checked~.listeBordureMenu {
-    background-color: #9356DC;
-    color: #fff;
+.titreListeMenu{
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-
 .margListe {
     padding: 20px;
 }
@@ -489,14 +501,13 @@ input[type=checkbox]:checked~.listeBordureMenu {
 .descriptionMenu {
     width: 95%;
     padding-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.listeBordureMenu {
+.listeItemMenu {
     width: 100%;
     height: 100%;
-    padding-left: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px 1px #d7d7d7;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -507,6 +518,42 @@ input[type=checkbox]:checked~.listeBordureMenu {
     margin-bottom: 10px;
 }
 
+input[type=checkbox]:checked~ .check{
+    animation-duration: 1s;
+    animation-name: glissement;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox]:hover~ .check {
+    animation-duration: 1s;
+    animation-name: glissement;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.inputCheck .check{
+    opacity: 0;
+    width: 0;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #99E2D0;
+    color: white;
+}
+@keyframes glissement {
+
+    0% {
+        opacity: 1;
+        width: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 125px;
+    }
+}
 /*.inputCheck input:hover>.listeBordure>.listeIcon {
     
 }
