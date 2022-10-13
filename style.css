@@ -490,19 +490,20 @@ p {
     opacity: 0;
     cursor: pointer;
 }
-.titreListeMenu{
+.listeItemMenu, .listeItemMenu>.titreListeMenu, .descriptionMenu>p{
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 .margListe {
     padding: 20px;
 }
-
+.titreListeMenu{
+    width: 95%;
+}
 .descriptionMenu {
     width: 95%;
     padding-bottom: 10px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .listeItemMenu {
@@ -531,6 +532,19 @@ input[type=checkbox]:hover~ .check {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+input[type=checkbox]:checked~ .check>i{
+    animation-duration: 1s;
+    animation-name: glissementIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox]:hover~ .check>i{
+    animation-duration: 1s;
+    animation-name: glissementIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 .inputCheck .check{
     opacity: 0;
     width: 0;
@@ -552,6 +566,33 @@ input[type=checkbox]:hover~ .check {
     100% {
         opacity: 1;
         width: 125px;
+    }
+}
+@keyframes glissementIcon {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.aparait{
+    animation-name: aparaitre;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes aparaitre {
+
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 /*.inputCheck input:hover>.listeBordure>.listeIcon {
