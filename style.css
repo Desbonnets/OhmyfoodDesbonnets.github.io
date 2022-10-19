@@ -737,7 +737,8 @@ input[type=checkbox]:hover~ .check>i{
 
 /*Début footer*/
 .footer {
-    padding: 10%;
+    padding: 25px;
+    padding-left: 50px;
     flex-direction: column;
     align-items: flex-start;
     height: auto;
