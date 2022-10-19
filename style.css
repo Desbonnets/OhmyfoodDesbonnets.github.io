@@ -49,7 +49,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #99E2D0;
+    background: #9356DC;
     margin: -4px 0 0 -4px;
 }
 
@@ -201,7 +201,12 @@ h2 {
     justify-content: flex-start;
     align-items: center;
 }
-
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .flexColumnCentre {
     display: flex;
     flex-direction: column;
@@ -255,6 +260,18 @@ h2 {
 
 /* Fin Style Générale */
 /*Début header */
+.iconRetour{
+    font-size: 35px;
+    color: #000;
+    width: 50px;
+    height: 50px;
+}
+.margRetour{
+    margin-left: 25px;
+}
+.iconRetour:hover{
+    scale: 1.2;
+}
 
 .margPresentation {
     background-color: #F6F6F6;
@@ -284,6 +301,10 @@ h2 {
 .logo {
     width: auto;
     height: 35px;
+    align-self: center;
+}
+.logoMenu{
+    width: 100%;
 }
 
 .imgMenu {
@@ -386,6 +407,88 @@ p {
     margin-right: -100px;
 }
 
+.inputCheckRestaurants {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.inputCheckRestaurants input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+input[type=checkbox]:checked~ .sabonner>.iconSabonnerS{
+    animation-duration: 5s;
+    animation-name: remplirIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox]:hover~ .sabonner>.iconSabonnerS{
+    animation-duration: 5s;
+    animation-name: remplirIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked~ .sabonner>.iconSabonnerR{
+    animation-duration: 5s;
+    animation-name: viderIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
+    animation-duration: 5s;
+    animation-name: viderIcon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes remplirIcon {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes viderIcon {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.sabonner{
+    font-size: 35px;
+    max-height: 35px;
+}
+.iconSabonnerS{
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    z-index: 0;
+    background: -webkit-linear-gradient( #9356dc 25%, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.iconSabonnerR{
+    position: relative;
+    z-index: 1;
+}
+
 /* Fin Restaurants*/
 /* Début liste */
 .liste {
@@ -445,6 +548,25 @@ p {
     margin-right: -15px;
     z-index: 1;
     counter-increment: section;
+}
+.inputCheckMenu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.inputCheckMenu input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 
 /*Fin Liste*/
@@ -595,13 +717,6 @@ input[type=checkbox]:hover~ .check>i{
         opacity: 1;
     }
 }
-/*.inputCheck input:hover>.listeBordure>.listeIcon {
-    
-}
-
-.inputCheck input:hover>.listeBordure {
-    
-}*/
 
 .bouttonMenu:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -644,73 +759,3 @@ input[type=checkbox]:hover~ .check>i{
 }
 
 /*Fin footer*/
-
-
-
-
-/*.inputCheck {
-    position: relative;
-    height: 32px;
-    width: 32px;
-}
-
-.inputCheck input {
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    opacity: 0;
-    cursor: pointer;
-}
-.tailleIconFiltre {
-    margin: -2px;
-    height: 52px;
-    width: 52px;
-    border-radius: 25px;
-    background-color: #DEEBFF;
-    color: #0065FC;
-}
-/* Controle des loader */
-/*.coeur {
-    height: 32px;
-    width: 32px;
-    color: #9356DC;
-}
-
-
-input[type=checkbox]:checked~.coeur i .glissement {
-    background-color: #FF79DA;
-    animation-duration: 1s;
-    animation-name: glissement;
-    width: 32px;
-    height: 32px;
-    opacity: 0.5;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: 1;
-}
-
-@keyframes glissement {
-
-    from {
-        margin-top: 0%;
-    }
-
-    to {
-        margin-top: 100%;
-    }
-}
-.fa-heart {
-    color: #FFF;
-    background-color: #000;
-    border-radius: 50%;
-    padding:.2em;
-}
-.fa-heart::before {
-    content: "\f004";
-    font-weight: bold;
-    transition: color 1s ease-out;
-}
-.fa-heart:hover::before{
-    color: red;
-    cursor: pointer;
-}
-*/
