@@ -762,6 +762,14 @@ input[type=checkbox]:hover~.check>i {
     transition: .3s ease-in-out;
     z-index: 1;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+} 
+.Menu p{
+    margin-bottom: 5px;
+}
+.titreMenu{
+    background-color: #99E2D0;
+    height: 5px;
+    width: 50px;
 }
 
 /*Début footer*/
