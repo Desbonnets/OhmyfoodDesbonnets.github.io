@@ -1,8 +1,9 @@
 /* début Spinner Loader */
-.Affichage{
+.Affichage {
     opacity: 0;
     animation: 2s 3s forwards apparaitre;
 }
+
 @keyframes apparaitre {
     100% {
         opacity: 1;
@@ -12,6 +13,7 @@
         opacity: 0;
     }
 }
+
 .loader {
     position: absolute;
     width: 100%;
@@ -201,12 +203,14 @@ h2 {
     justify-content: flex-start;
     align-items: center;
 }
-.flexRow{
+
+.flexRow {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .flexColumnCentre {
     display: flex;
     flex-direction: column;
@@ -260,16 +264,18 @@ h2 {
 
 /* Fin Style Générale */
 /*Début header */
-.iconRetour{
+.iconRetour {
     font-size: 35px;
     color: #000;
     width: 50px;
     height: 50px;
 }
-.margRetour{
+
+.margRetour {
     margin-left: 25px;
 }
-.iconRetour:hover{
+
+.iconRetour:hover {
     scale: 1.2;
 }
 
@@ -303,7 +309,8 @@ h2 {
     height: 35px;
     align-self: center;
 }
-.logoMenu{
+
+.logoMenu {
     width: 100%;
 }
 
@@ -338,10 +345,12 @@ h2 {
     width: 100%;
     height: 150px;
 }
-.imgRestaurantsEtiquette{
+
+.imgRestaurantsEtiquette {
     display: flex;
     width: 100%;
 }
+
 .blocRestaurants {
     padding-left: 20px;
     padding-right: 20px;
@@ -424,32 +433,35 @@ p {
     opacity: 0;
     cursor: pointer;
 }
-input[type=checkbox]:checked~ .sabonner>.iconSabonnerS{
+
+input[type=checkbox]:checked~.sabonner>.iconSabonnerS {
     animation-duration: 5s;
     animation-name: remplirIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-input[type=checkbox]:hover~ .sabonner>.iconSabonnerS{
+input[type=checkbox]:hover~.sabonner>.iconSabonnerS {
     animation-duration: 5s;
     animation-name: remplirIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked~ .sabonner>.iconSabonnerR{
+
+input[type=checkbox]:checked~.sabonner>.iconSabonnerR {
     animation-duration: 5s;
     animation-name: viderIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
+input[type=checkbox]:hover~.sabonner>.iconSabonnerR {
     animation-duration: 5s;
     animation-name: viderIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 @keyframes remplirIcon {
 
     0% {
@@ -460,6 +472,7 @@ input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
         opacity: 1;
     }
 }
+
 @keyframes viderIcon {
 
     0% {
@@ -470,21 +483,24 @@ input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
         opacity: 0;
     }
 }
-.sabonner{
+
+.sabonner {
     font-size: 35px;
     max-height: 35px;
 }
-.iconSabonnerS{
+
+.iconSabonnerS {
     opacity: 0;
     position: absolute;
     right: 0;
     top: 1px;
     z-index: 0;
-    background: -webkit-linear-gradient( #9356dc 25%, #ff79da);
+    background: -webkit-linear-gradient(#9356dc 25%, #ff79da);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.iconSabonnerR{
+
+.iconSabonnerR {
     position: relative;
     z-index: 1;
 }
@@ -549,7 +565,8 @@ input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
     z-index: 1;
     counter-increment: section;
 }
-.inputCheckMenu{
+
+.inputCheckMenu {
     position: relative;
     display: flex;
     align-items: center;
@@ -612,17 +629,23 @@ input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
     opacity: 0;
     cursor: pointer;
 }
-.listeItemMenu, .listeItemMenu>.titreListeMenu, .descriptionMenu>p{
+
+.listeItemMenu,
+.listeItemMenu>.titreListeMenu,
+.descriptionMenu>p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .margListe {
     padding: 20px;
 }
-.titreListeMenu{
+
+.titreListeMenu {
     width: 95%;
 }
+
 .descriptionMenu {
     width: 95%;
     padding-bottom: 10px;
@@ -641,33 +664,35 @@ input[type=checkbox]:hover~ .sabonner>.iconSabonnerR{
     margin-bottom: 10px;
 }
 
-input[type=checkbox]:checked~ .check{
+input[type=checkbox]:checked~.check {
     animation-duration: 1s;
     animation-name: glissement;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-input[type=checkbox]:hover~ .check {
+input[type=checkbox]:hover~.check {
     animation-duration: 1s;
     animation-name: glissement;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked~ .check>i{
+
+input[type=checkbox]:checked~.check>i {
     animation-duration: 1s;
     animation-name: glissementIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-input[type=checkbox]:hover~ .check>i{
+input[type=checkbox]:hover~.check>i {
     animation-duration: 1s;
     animation-name: glissementIcon;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.inputCheck .check{
+
+.inputCheck .check {
     opacity: 0;
     width: 0;
     height: 110px;
@@ -678,6 +703,7 @@ input[type=checkbox]:hover~ .check>i{
     background-color: #99E2D0;
     color: white;
 }
+
 @keyframes glissement {
 
     0% {
@@ -690,6 +716,7 @@ input[type=checkbox]:hover~ .check>i{
         width: 125px;
     }
 }
+
 @keyframes glissementIcon {
 
     0% {
@@ -700,11 +727,13 @@ input[type=checkbox]:hover~ .check>i{
         transform: rotate(360deg);
     }
 }
-.aparait{
+
+.aparait {
     animation-name: aparaitre;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
+
 @keyframes aparaitre {
 
     0% {
