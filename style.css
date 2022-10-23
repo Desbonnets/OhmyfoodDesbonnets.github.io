@@ -1,805 +1,742 @@
+@charset "UTF-8";
 /* début Spinner Loader */
 .Affichage {
-    opacity: 0;
-    animation: 2s 3s forwards apparaitre;
+  opacity: 0;
+  animation: 2s 3s forwards apparaitre;
 }
 
 @keyframes apparaitre {
-    100% {
-        opacity: 1;
-    }
-
-    0% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }
-
 .loader {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: white;
-    animation: 2s 3s forwards disparaitre;
-    z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  animation: 2s 3s forwards disparaitre;
+  z-index: 100;
 }
 
 .lds-roller {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 80px;
-    height: 80px;
-    z-index: 5;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
 }
-
 .lds-roller div {
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    transform-origin: 40px 40px;
-    animation-fill-mode: forwards;
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+  animation-fill-mode: forwards;
 }
-
 .lds-roller div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #9356DC;
-    margin: -4px 0 0 -4px;
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9356DC;
+  margin: -4px 0 0 -4px;
 }
-
 .lds-roller div:nth-child(1) {
-    animation-delay: -0.036s;
+  animation-delay: -0.036s;
 }
-
 .lds-roller div:nth-child(1):after {
-    top: 63px;
-    left: 63px;
+  top: 63px;
+  left: 63px;
 }
-
 .lds-roller div:nth-child(2) {
-    animation-delay: -0.072s;
+  animation-delay: -0.072s;
 }
-
 .lds-roller div:nth-child(2):after {
-    top: 68px;
-    left: 56px;
+  top: 68px;
+  left: 56px;
 }
-
 .lds-roller div:nth-child(3) {
-    animation-delay: -0.108s;
+  animation-delay: -0.108s;
 }
-
 .lds-roller div:nth-child(3):after {
-    top: 71px;
-    left: 48px;
+  top: 71px;
+  left: 48px;
 }
-
 .lds-roller div:nth-child(4) {
-    animation-delay: -0.144s;
+  animation-delay: -0.144s;
 }
-
 .lds-roller div:nth-child(4):after {
-    top: 72px;
-    left: 40px;
+  top: 72px;
+  left: 40px;
 }
-
 .lds-roller div:nth-child(5) {
-    animation-delay: -0.18s;
+  animation-delay: -0.18s;
 }
-
 .lds-roller div:nth-child(5):after {
-    top: 71px;
-    left: 32px;
+  top: 71px;
+  left: 32px;
 }
-
 .lds-roller div:nth-child(6) {
-    animation-delay: -0.216s;
+  animation-delay: -0.216s;
 }
-
 .lds-roller div:nth-child(6):after {
-    top: 68px;
-    left: 24px;
+  top: 68px;
+  left: 24px;
 }
-
 .lds-roller div:nth-child(7) {
-    animation-delay: -0.252s;
+  animation-delay: -0.252s;
 }
-
 .lds-roller div:nth-child(7):after {
-    top: 63px;
-    left: 17px;
+  top: 63px;
+  left: 17px;
 }
-
 .lds-roller div:nth-child(8) {
-    animation-delay: -0.288s;
+  animation-delay: -0.288s;
 }
-
 .lds-roller div:nth-child(8):after {
-    top: 56px;
-    left: 12px;
+  top: 56px;
+  left: 12px;
 }
 
 @keyframes lds-roller {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 @keyframes disparaitre {
-    0% {
-        height: 100%;
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        height: 0%;
-    }
+  0% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+  }
 }
-
-
 /* fin Spinner loader */
-
 /* début Style Générale */
 html,
 body {
-    font-family: Roboto;
-    font-size: large;
-    margin: 0;
+  font-family: Roboto;
+  font-size: large;
+  margin: 0;
 }
 
 h2 {
-    margin: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .texteGras {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .cBlanc {
-    color: #fff;
+  color: #fff;
 }
 
 .cNoir {
-    color: #000;
+  color: #000;
 }
 
 .bgNoir {
-    background-color: #353535;
+  background-color: #353535;
 }
 
 .flexCentre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexAround {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .flexBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flexStart {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .flexRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .flexColumnCentre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexColumnStart {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .flexColumnAround {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .flexColumnBetween {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .flexColumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .texteStyleNull {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .bordureNull {
-    border: none;
+  border: none;
 }
 
 .blocShadow {
-    box-shadow: 0 5px 5px 1px #e6e6e6;
+  box-shadow: 0 5px 5px 1px #e6e6e6;
 }
-
 .blocShadow:hover {
-    box-shadow: 5px 5px 5px 1px #9356DC;
-    transform: scale(1.05);
+  box-shadow: 5px 5px 5px 1px #9356DC;
+  transform: scale(1.05);
 }
 
 .lien:hover {
-    color: #9356DC;
+  color: #9356DC;
 }
 
 /* Fin Style Générale */
 /*Début header */
 .iconRetour {
-    font-size: 35px;
-    color: #000;
-    width: 50px;
-    height: 50px;
+  font-size: 35px;
+  color: #000;
+  width: 50px;
+  height: 50px;
 }
 
 .margRetour {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .iconRetour:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .margPresentation {
-    background-color: #F6F6F6;
-    text-align: center;
-    padding: 20px;
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 20px;
 }
 
 .margLogo {
-    margin-top: 25px;
-    padding-bottom: 10px;
+  margin-top: 25px;
+  padding-bottom: 10px;
 }
 
 .logoShadow {
-    margin-bottom: 5px;
-    box-shadow: 0 5px 5px 0 #d2d2d2;
+  margin-bottom: 5px;
+  box-shadow: 0 5px 5px 0 #d2d2d2;
 }
 
 .blocLocalisation {
-    background-color: #EAEAEA;
-    height: 50px;
+  background-color: #EAEAEA;
+  height: 50px;
 }
 
 .iconLocalisation {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .logo {
-    width: auto;
-    height: 35px;
-    align-self: center;
+  width: auto;
+  height: 35px;
+  align-self: center;
 }
 
 .logoMenu {
-    width: 100%;
+  width: 100%;
 }
 
 .imgMenu {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 300px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 300px;
 }
 
 /* Début Restaurants*/
 #Restaurants {
-    flex-direction: column-reverse;
-    width: 100%;
+  flex-direction: column-reverse;
+  width: 100%;
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .tailleRestaurants {
-    margin-right: 20px;
-    padding: 20px;
-    height: auto;
-    background-color: white;
+  margin-right: 20px;
+  padding: 20px;
+  height: auto;
+  background-color: white;
 }
 
 .imgRestaurants {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 150px;
 }
 
 .imgRestaurantsEtiquette {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .blocRestaurants {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex: none;
-    width: 90%;
-    margin: 0;
-    height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: none;
+  width: 90%;
+  margin: 0;
+  height: auto;
 }
 
 .sousBlocRestaurants {
-    position: relative;
-    height: auto;
-    background-color: white;
-    border-radius: 20px;
-    width: 100%;
-    margin-bottom: 25px;
+  position: relative;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 .margLigne2 {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .DetailRestaurants {
-    width: 90%;
-    margin-top: 10px;
+  width: 90%;
+  margin-top: 10px;
+}
+.DetailRestaurants h3 {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.DetailRestaurants h3,
 p {
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-.bouttonRestaurants:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    background: linear-gradient(#FF79DAE8, #9256dce8);
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .bouttonRestaurants {
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: white;
-    overflow: hidden;
-    transition: .3s ease-in-out;
-    z-index: 1;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.bouttonRestaurants:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: linear-gradient(rgba(255, 121, 218, 0.9098039216), rgba(146, 86, 220, 0.9098039216));
 }
 
 .etiquette {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: end;
-    background-color: #99E2D0;
-    color: #127c64;
-    position: relative;
-    top: -110px;
-    right: 110px;
-    z-index: 1;
-    width: 100px;
-    height: 30px;
-    margin-right: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  background-color: #99E2D0;
+  color: #127c64;
+  position: relative;
+  top: -110px;
+  right: 110px;
+  z-index: 1;
+  width: 100px;
+  height: 30px;
+  margin-right: -100px;
 }
 
 .inputCheckRestaurants {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    bottom: 30px;
-    right: 25px;
-    width: 35px;
-    height: 35px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
 }
-
 .inputCheckRestaurants input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
-input[type=checkbox]:checked~.sabonner>.iconSabonnerS {
-    animation-duration: 2s;
-    animation-name: remplirIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+input[type=checkbox]:checked ~ .sabonner > .iconSabonnerS, input[type=checkbox]:hover ~ .sabonner > .iconSabonnerS {
+  animation-duration: 2s;
+  animation-name: remplirIcon;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-
-input[type=checkbox]:hover~.sabonner>.iconSabonnerS {
-    animation-duration: 2s;
-    animation-name: remplirIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-input[type=checkbox]:checked~.sabonner>.iconSabonnerR {
-    animation-duration: 2s;
-    animation-name: viderIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-input[type=checkbox]:hover~.sabonner>.iconSabonnerR {
-    animation-duration: 2s;
-    animation-name: viderIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+input[type=checkbox]:checked ~ .sabonner > .iconSabonnerR, input[type=checkbox]:hover ~ .sabonner > .iconSabonnerR {
+  animation-duration: 2s;
+  animation-name: viderIcon;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes remplirIcon {
-
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 @keyframes viderIcon {
-
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 .sabonner {
-    font-size: 35px;
-    max-height: 35px;
+  font-size: 35px;
+  max-height: 35px;
 }
 
 .iconSabonnerS {
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 1px;
-    z-index: 0;
-    background: -webkit-linear-gradient(#9356dc 25%, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  z-index: 0;
+  background: -webkit-linear-gradient(#9356dc 25%, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .iconSabonnerR {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Fin Restaurants*/
 /* Début liste */
 .liste {
-    counter-reset: section;
-    list-style: none;
-    padding: 0;
+  counter-reset: section;
+  list-style: none;
+  padding: 0;
 }
 .liste a {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
 .margListe {
-    padding: 20px;
+  padding: 20px;
 }
 
 .listeIncrement {
-    counter-reset: subsection;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    height: 75px;
-    display: flex;
-    align-items: center;
+  counter-reset: subsection;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  height: 75px;
+  display: flex;
+  align-items: center;
 }
 
 .listeIcon {
-    width: 25px;
-    padding: 10px 10px 10px 5px;
-    color: gray;
+  width: 25px;
+  padding: 10px 10px 10px 5px;
+  color: gray;
 }
 
 .listeBordure {
-    width: 100%;
-    height: 100%;
-    background-color: #f6f6f6;
-    padding-left: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px 1px #d2d2d2b2;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  padding-left: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px 1px rgba(210, 210, 210, 0.6980392157);
+  display: flex;
+  align-items: center;
 }
-
 .listeBordure p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.listeIncrement:hover>.listeBordure>.listeIcon {
-    color: #9356DC;
+.listeIncrement:hover > .listeBordure {
+  background-color: #F5EDFF;
 }
-
-.listeIncrement:hover>.listeBordure {
-    background-color: #F5EDFF;
+.listeIncrement:hover > .listeBordure > .listeIcon {
+  color: #9356DC;
 }
-
 .listeIncrement:before {
-    content: counter(section, decimal);
-    padding: 5px 10px 5px 10px;
-    background-color: #9356DC;
-    color: white;
-    border-radius: 50%;
-    margin-right: -15px;
-    z-index: 1;
-    counter-increment: section;
+  content: counter(section, decimal);
+  padding: 5px 10px 5px 10px;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  margin-right: -15px;
+  z-index: 1;
+  counter-increment: section;
 }
 
 .inputCheckMenu {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
-
 .inputCheckMenu input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /*Fin Liste*/
 /* Début Menu */
 .Menu {
-    background-color: #f6f6f6;
-    position: relative;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    height: auto;
-    top: -50px;
-    z-index: 1;
-    padding: 20px;
+  background-color: #f6f6f6;
+  position: relative;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: auto;
+  top: -50px;
+  z-index: 1;
+  padding: 20px;
 }
-
 .Menu h2 {
-    font-family: Shrikhand;
+  font-family: Shrikhand;
 }
 
 .listeMenu {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .inputCheck {
-    position: relative;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    padding-left: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px 1px #d7d7d7;
-    height: 110px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px 1px #d7d7d7;
+  height: 110px;
 }
-
 .inputCheck input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.listeItemMenu,
-.listeItemMenu>.titreListeMenu,
-.descriptionMenu>p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.margListe {
-    padding: 20px;
-}
-
-.titreListeMenu {
-    width: 95%;
-}
-
-.descriptionMenu {
-    width: 95%;
-    padding-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .listeItemMenu {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listeItemMenu > .titreListeMenu {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.descriptionMenu > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.margListe {
+  padding: 20px;
+}
+
+.titreListeMenu {
+  width: 95%;
+}
+
+.descriptionMenu {
+  width: 95%;
+  padding-bottom: 10px;
+}
+
+.listeItemMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .listeBordureMenu h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
-input[type=checkbox]:checked~.check {
-    animation-duration: 1s;
-    animation-name: glissement;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+input[type=checkbox]:checked ~ .check, input[type=checkbox]:hover ~ .check {
+  animation-duration: 1s;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-
-input[type=checkbox]:hover~.check {
-    animation-duration: 1s;
-    animation-name: glissement;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-input[type=checkbox]:checked~.check>i {
-    animation-duration: 1s;
-    animation-name: glissementIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-input[type=checkbox]:hover~.check>i {
-    animation-duration: 1s;
-    animation-name: glissementIcon;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+input[type=checkbox]:checked ~ .check > i, input[type=checkbox]:hover ~ .check > i {
+  animation-duration: 1s;
+  animation-name: glissementIcon;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .inputCheck .check {
-    opacity: 0;
-    width: 0;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #99E2D0;
-    color: white;
+  opacity: 0;
+  width: 0;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  color: white;
 }
 
 @keyframes glissement {
-
-    0% {
-        opacity: 1;
-        width: 0%;
-    }
-
-    100% {
-        opacity: 1;
-        width: 125px;
-    }
+  0% {
+    opacity: 1;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 125px;
+  }
 }
-
 @keyframes glissementIcon {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 .aparait {
-    animation-name: aparaitre;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+  animation-name: aparaitre;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes aparaitre {
-
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
-.bouttonMenu:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    background: linear-gradient(#FF79DAE8, #9256dce8);
-}
-
 .bouttonMenu {
-    padding: 15px 50px 15px 50px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: white;
-    overflow: hidden;
-    transition: .3s ease-in-out;
-    z-index: 1;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
-} 
-.Menu p{
-    margin-bottom: 5px;
+  padding: 15px 50px 15px 50px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.titreMenu{
-    background-color: #99E2D0;
-    height: 5px;
-    width: 50px;
+.bouttonMenu:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: linear-gradient(rgba(255, 121, 218, 0.9098039216), rgba(146, 86, 220, 0.9098039216));
+}
+
+.Menu p {
+  margin-bottom: 5px;
+}
+
+.titreMenu {
+  background-color: #99E2D0;
+  height: 5px;
+  width: 50px;
 }
 
 /*Début footer*/
 .footer {
-    padding: 25px;
-    padding-left: 50px;
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
+  padding: 25px;
+  padding-left: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
 }
 
 .footerTexte {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer h3 {
-    font-family: Shrikhand;
-    font-size: larger;
-    margin-top: 0;
+  font-family: Shrikhand;
+  font-size: larger;
+  margin-top: 0;
 }
 
 .footerIcon {
-    width: 20px;
-    padding-right: 10px;
+  width: 20px;
+  padding-right: 10px;
 }
 
 /*Fin footer*/
+
+/*# sourceMappingURL=style.css.map */
