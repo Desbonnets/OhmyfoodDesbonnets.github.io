@@ -1,0 +1,808 @@
+/* début Spinner Loader */
+
+.Affichage {
+    opacity: 0;
+    animation: 2s 3s forwards apparaitre;
+}
+
+@keyframes apparaitre {
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}
+
+.loader {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    animation: 2s 3s forwards disparaitre;
+    z-index: 100;
+}
+
+.lds-roller {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 5;
+
+    div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+        animation-fill-mode: forwards;
+
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #9356DC;
+            margin: -4px 0 0 -4px;
+        }
+
+        &:nth-child(1) {
+            animation-delay: -0.036s;
+
+            &:after {
+                top: 63px;
+                left: 63px;
+            }
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.072s;
+
+            &:after {
+                top: 68px;
+                left: 56px;
+            }
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.108s;
+
+            &:after {
+                top: 71px;
+                left: 48px;
+            }
+        }
+
+        &:nth-child(4) {
+            animation-delay: -0.144s;
+
+            &:after {
+                top: 72px;
+                left: 40px;
+            }
+        }
+
+        &:nth-child(5) {
+            animation-delay: -0.18s;
+
+            &:after {
+                top: 71px;
+                left: 32px;
+            }
+        }
+
+        &:nth-child(6) {
+            animation-delay: -0.216s;
+
+            &:after {
+                top: 68px;
+                left: 24px;
+            }
+        }
+
+        &:nth-child(7) {
+            animation-delay: -0.252s;
+
+            &:after {
+                top: 63px;
+                left: 17px;
+            }
+        }
+
+        &:nth-child(8) {
+            animation-delay: -0.288s;
+
+            &:after {
+                top: 56px;
+                left: 12px;
+            }
+        }
+    }
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes disparaitre {
+    0% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0%;
+    }
+}
+
+/* fin Spinner loader */
+
+/* début Style Générale */
+
+html,
+body {
+    font-family: Roboto;
+    font-size: large;
+    margin: 0;
+}
+
+h2 {
+    margin: 20px 0 20px 0;
+}
+
+.texteGras {
+    font-weight: bold;
+}
+
+.cBlanc {
+    color: #fff;
+}
+
+.cNoir {
+    color: #000;
+}
+
+.bgNoir {
+    background-color: #353535;
+}
+
+.flexCentre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexColumnCentre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexColumnStart {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.flexColumnAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flexColumnBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.texteStyleNull {
+    text-decoration: none;
+}
+
+.bordureNull {
+    border: none;
+}
+
+.blocShadow {
+    box-shadow: 0 5px 5px 1px #e6e6e6;
+
+    &:hover {
+        box-shadow: 5px 5px 5px 1px #9356DC;
+        transform: scale(1.05);
+    }
+}
+
+.lien:hover {
+    color: #9356DC;
+}
+
+/* Fin Style Générale */
+/*Début header */
+
+.iconRetour {
+    font-size: 35px;
+    color: #000;
+    width: 50px;
+    height: 50px;
+}
+
+.margRetour {
+    margin-left: 25px;
+}
+
+.iconRetour:hover {
+    transform: scale(1.2);
+}
+
+.margPresentation {
+    background-color: #F6F6F6;
+    text-align: center;
+    padding: 20px;
+}
+
+.margLogo {
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.logoShadow {
+    margin-bottom: 5px;
+    box-shadow: 0 5px 5px 0 #d2d2d2;
+}
+
+.blocLocalisation {
+    background-color: #EAEAEA;
+    height: 50px;
+}
+
+.iconLocalisation {
+    margin-right: 10px;
+}
+
+.logo {
+    width: auto;
+    height: 35px;
+    align-self: center;
+}
+
+.logoMenu {
+    width: 100%;
+}
+
+.imgMenu {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+/* Début Restaurants*/
+
+#Restaurants {
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.tailleRestaurants {
+    margin-right: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: white;
+}
+
+.imgRestaurants {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 150px;
+}
+
+.imgRestaurantsEtiquette {
+    display: flex;
+    width: 100%;
+}
+
+.blocRestaurants {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: none;
+    width: 90%;
+    margin: 0;
+    height: auto;
+}
+
+.sousBlocRestaurants {
+    position: relative;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.margLigne2 {
+    flex-direction: column;
+}
+
+.DetailRestaurants {
+    width: 90%;
+    margin-top: 10px;
+
+    h3 {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.bouttonRestaurants {
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        background: linear-gradient(#FF79DAE8, #9256dce8);
+    }
+
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.etiquette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+    background-color: #99E2D0;
+    color: #127c64;
+    position: relative;
+    top: -110px;
+    right: 110px;
+    z-index: 1;
+    width: 100px;
+    height: 30px;
+    margin-right: -100px;
+}
+
+.inputCheckRestaurants {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 30px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+
+    input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+input[type=checkbox] {
+
+    &:checked~.sabonner>.iconSabonnerS,
+    &:hover~.sabonner>.iconSabonnerS {
+        animation-duration: 2s;
+        animation-name: remplirIcon;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    &:checked~.sabonner>.iconSabonnerR,
+    &:hover~.sabonner>.iconSabonnerR {
+        animation-duration: 2s;
+        animation-name: viderIcon;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes remplirIcon {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes viderIcon {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.sabonner {
+    font-size: 35px;
+    max-height: 35px;
+}
+
+.iconSabonnerS {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    z-index: 0;
+    background: -webkit-linear-gradient(#9356dc 25%, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.iconSabonnerR {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fin Restaurants*/
+/* Début liste */
+
+.liste {
+    counter-reset: section;
+    list-style: none;
+    padding: 0;
+
+    a {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.margListe {
+    padding: 20px;
+}
+
+.listeIncrement {
+    counter-reset: subsection;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.listeIcon {
+    width: 25px;
+    padding: 10px 10px 10px 5px;
+    color: gray;
+}
+
+.listeBordure {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    padding-left: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px #d2d2d2b2;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.listeIncrement {
+    &:hover>.listeBordure {
+        >.listeIcon {
+            color: #9356DC;
+        }
+
+        background-color: #F5EDFF;
+    }
+
+    &:before {
+        content: counter(section, decimal);
+        padding: 5px 10px 5px 10px;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 50%;
+        margin-right: -15px;
+        z-index: 1;
+        counter-increment: section;
+    }
+}
+
+.inputCheckMenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+/*Fin Liste*/
+/* Début Menu */
+
+.Menu {
+    background-color: #f6f6f6;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: auto;
+    top: -50px;
+    z-index: 1;
+    padding: 20px;
+
+    h2 {
+        font-family: Shrikhand;
+    }
+}
+
+.listeMenu {
+    list-style: none;
+    padding: 0;
+}
+
+.inputCheck {
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px #d7d7d7;
+    height: 110px;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.listeItemMenu {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    >.titreListeMenu {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.descriptionMenu>p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.margListe {
+    padding: 20px;
+}
+
+.titreListeMenu {
+    width: 95%;
+}
+
+.descriptionMenu {
+    width: 95%;
+    padding-bottom: 10px;
+}
+
+.listeItemMenu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.listeBordureMenu h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+input[type=checkbox] {
+
+    &:checked~.check,
+    &:hover~.check {
+        animation-duration: 1s;
+        animation-name: glissement;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    &:checked~.check>i,
+    &:hover~.check>i {
+        animation-duration: 1s;
+        animation-name: glissementIcon;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
+.inputCheck .check {
+    opacity: 0;
+    width: 0;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #99E2D0;
+    color: white;
+}
+
+@keyframes glissement {
+    0% {
+        opacity: 1;
+        width: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 125px;
+    }
+}
+
+@keyframes glissementIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.aparait {
+    animation-name: aparaitre;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aparaitre {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.bouttonMenu {
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        background: linear-gradient(#FF79DAE8, #9256dce8);
+    }
+
+    padding: 15px 50px 15px 50px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Menu p {
+    margin-bottom: 5px;
+}
+
+.titreMenu {
+    background-color: #99E2D0;
+    height: 5px;
+    width: 50px;
+}
+
+/*Début footer*/
+
+.footer {
+    padding: 25px;
+    padding-left: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
+
+.footerTexte {
+    margin-bottom: 10px;
+}
+
+.footer h3 {
+    font-family: Shrikhand;
+    font-size: larger;
+    margin-top: 0;
+}
+
+.footerIcon {
+    width: 20px;
+    padding-right: 10px;
+}
+
+/*Fin footer*/
