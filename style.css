@@ -671,9 +671,29 @@ input[type=checkbox]:checked ~ .check > i, input[type=checkbox]:hover ~ .check >
     transform: rotate(360deg);
   }
 }
-.aparait {
+.aparaitE > li {
+  transform: translateX(-100%);
+  opacity: 0;
   animation-name: aparaitre;
   animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.aparaitP > li {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-name: aparaitre;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.aparaitD > li {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-name: aparaitre;
+  animation-duration: 3s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
